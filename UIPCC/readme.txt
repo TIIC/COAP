@@ -6,8 +6,8 @@ Author: Jamie Zhu <jimzhu@GitHub><jmzhu AT cse.cuhk.edu.hk>
 Author: Zibin Zheng, CUHK (for the initial Java implementation).
 Last updated: 2014/03/26.
 
-This package implements five baseline QoS prediction approaches, including 
-UMEAN, IMEAN, UPCC, IPCC, UIPCC (a.k.a. WSRec). 
+This package implements five baseline reliability prediction approaches, 
+including UMEAN, IMEAN, UPCC, IPCC, UIPCC (a.k.a. WSRec). 
 
 ----------------------------------------------------------------------------
 Reference and citation
@@ -16,13 +16,13 @@ Reference and citation
 Please refer to the following papers for the detailed descriptions of the 
 implemented algorithms:
 
-- Zibin Zheng, Hao Ma, Michael R. Lyu, and Irwin King, "WSRec: A Collaborative 
-  Filtering Based Web Service Recommender System," in Proc. of the IEEE 
-  International Conference on Web Services (ICWS'09), 2009, pp. 437-444.
+- Zibin Zheng, and Michael R. Lyu, "Collaborative Reliability Prediction of 
+  Service-oriented Systems," in Proc. of the 32nd {ACM/IEEE} International 
+  Conference on Software Engineering (ICSE'10), 2010, pp. 35-44.
 
-- Zibin Zheng, Hao Ma, Michael R. Lyu, and Irwin King, "QoS-Aware Web Service 
-  Recommendation by Collaborative Filtering", IEEE Transactions on Service 
-  Computing, vol.4, no.2, pp.140-152, 2011.
+- Zibin Zheng, and Michael R. Lyu, "Personalized Reliability Prediction of 
+  Web Services", ACM Trans. Softw. Eng. Methodol., vol.22, no.2, pp.12-12, 
+  2013.
 
 IF YOU USE THIS PACKAGE IN PUBLISHED RESEARCH, PLEASE CITE THE ABOVE PAPERS. 
 THANKS!
