@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------
-README file for CLUS_online
+README file for CLUS_offline
 ----------------------------------------------------------------------------
 
 Author: Jamie Zhu <jimzhu@GitHub>
@@ -7,8 +7,8 @@ Last updated: 2015/03/26.
 
 This package implements a benchmark approach, CLUS (Silic et al., FSE'13), 
 for Web service reliability prediction based on K-Means clustering. We refer  
-to this package as "CLUS_online", because we implement it in an online 
-setting where the data are assumed to be collected as a data stream.
+to this package as "CLUS_offline", because we implement it in an offline 
+setting where all the data are assumed to be readily available.
 
 ----------------------------------------------------------------------------
 Reference and citation
@@ -55,7 +55,9 @@ packages, so you would also need to install these packages first.
 Contents of this package
 ----------------------------------------------------------------------------
 
-CLUS_online/
+CLUS_offline/
+  - run_rel.py                   - script file for running the experiments on 
+                                   reliability QoS data 
   - run_rt.py                    - script file for running the experiments on 
                                    response-time QoS data 
   - setup.py                     - setup script file for build c++ modules
@@ -77,7 +79,7 @@ CLUS_online/
                                    for building core.so
   - result/                      - directory for storing evaluation results
                                    available metrics: (MAE, NMAE, RMSE, MRE, NPRE)
-      - avg_rtResult_0.04.txt    - E.g., the response-time prediction result under 
+      - avg_relResult_0.04.txt   - E.g., the reliability prediction result under 
                                    matrix density = 4%
       - [...]                    - many other results
 
@@ -88,15 +90,17 @@ Usage of this package
 For ease of reproducing and compare with other approaches, we provide the 
 detailed experimental results with five metrics (MAE, NMAE, RMSE), 
 under the "result/" directory, after running the above QoS prediction approach 
-on our dataset. E.g.,"result/avg_rtResult_0.04.txt" records the evaluation 
+on our dataset. E.g.,"result/avg_relResult_0.04.txt" records the evaluation 
 results under matrix density = 4%. In particular, each experiment is run for 
 20 times and the average result (including std value) is reported. These 
 results can be directly used for your research work.
 
 On the other hand, if you want to reproduce our experiments, you can run the 
-program with our provided Python scripts "run_rt.py". You can also turn on the 
-"parallelMode" in the config area for speedup if you use a multi-core computer.
+program with our provided Python scripts "run_rel.py" and "run_rt.py". You can 
+also turn on the "parallelMode" in the config area for speedup if you use a 
+multi-core computer.
 
+>> python run_rel.py
 >> python run_rt.py
 
 Make sure the external module "core.so" exists. If not, you can build it by 
@@ -128,5 +132,4 @@ note saying that the original programs are available from our web page
 no guarantees that it fits your purposes or that it is bug-free. All use 
 of these programs is entirely at the user's own risk. For any enquiries, 
 please feel free to contact Jamie Zhu <jmzhu AT cse.cuhk.edu.hk>.
-
 
